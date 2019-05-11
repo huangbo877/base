@@ -101,7 +101,7 @@ dependencies {
     api rootProject.ext.dependencies["autosize"]
 
     //ui框架
-    api rootProject.ext.dependencies["xui"]
+//    api rootProject.ext.dependencies["xui"]
 //    api rootProject.ext.dependencies["arch"]
     //dtoast
     api rootProject.ext.dependencies["dtoast"]
