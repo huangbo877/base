@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">base</string>
+
+    <string name="no_data">暂无数据</string>
+    <string name="error_data">网络请求失败</string>
+    <string name="pull_up_loading">上拉加载</string>
+    <string name="pull_down_refresh">下拉刷新</string>
+    <string name="pull_loose_refreshing">松开刷新</string>
+    <string name="pull_loose_load_more">松开加载更多</string>
+    <string name="loading">加载中…</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="prompt">提示</string>
+
+    <string name="emptyView_mode_desc_single">这是一行提示语</string>
+    <string name="emptyView_mode_desc_double">我是一个EmptyView</string>
+    <string name="emptyView_mode_desc_detail_double">通过右上角的菜单来切换我的不同状态</string>
+    <string name="emptyView_mode_desc_fail_title">加载失败</string>
+    <string name="emptyView_mode_desc_fail_desc">请检测网络是否能正常连接</string>
+    <string name="emptyView_mode_desc_retry">点击重试</string>
+</resources>
