@@ -1,0 +1,131 @@
+/**
+ *  全局统一配置文件
+ */
+ext {
+    //true 每个业务Module可以单独开发
+    //false 每个业务Module以lib的方式运行
+    //修改之后需要Sync方可生效
+    isModule = false
+
+    //版本号
+    versions = [
+            applicationId           : "com.stdeepblue.znzz",        //应用ID
+            versionCode             : 1,                    //版本号
+            versionName             : "1.0.0",              //版本名称
+
+            compileSdkVersion       : 27,
+            buildToolsVersion       : "28.0.3",
+            minSdkVersion           : 19,
+            targetSdkVersion        : 26,
+
+            androidSupportSdkVersion: "27.1.1",
+            constraintLayoutVersion : "1.1.1",
+            runnerVersion           : "1.0.1",
+            espressoVersion         : "3.0.1",
+            junitVersion            : "4.12",
+            annotationsVersion      : "24.0.0",
+
+            multidexVersion         : "1.0.2",
+            butterknifeVersion      : "8.4.0",
+            arouterApiVersion       : "1.4.0",
+            arouterCompilerVersion  : "1.2.1",
+            arouterannotationVersion: "1.0.4",
+            eventbusVersion         : "3.0.0",
+            okgoVersion             : "2.1.4",
+            gsonVersion             : "2.7",
+            loggerVersion           : "2.2.0",
+            fastjsonVersion         : "1.1.54",
+            barlibraryVersion       : "2.3.0",
+            frescoVersion           : "1.3.0",
+            bannerVersion           : "1.4.10",
+            javaxVersion            : "1.2",
+            lombokVersion           : "1.16.6",
+            greendaoVersion         : "3.2.2",
+            permissionVersion       : "2.0.0-rc12",
+            autosizeVersion         : "1.1.0",
+            xuiVersion              : "1.0.1",
+            qmuiVersion              : "1.2.0",
+            archVersion              : "0.3.1",
+            dtoastVersion              : "1.1.5",
+            SmartRefreshLayoutVersion              : "1.1.0-alpha-21",
+            shadowVersion              : "1.0.3",
+            zbarlibaryVersion              : "1.1.5",
+            XTabLayoutVersion              : "1.1.4",
+
+    ]
+    dependencies = ["appcompat_v7"        : "com.android.support:appcompat-v7:${versions["androidSupportSdkVersion"]}",
+                    "constraint_layout"   : "com.android.support.constraint:constraint-layout:${versions["constraintLayoutVersion"]}",
+                    "runner"              : "com.android.support.test:runner:${versions["runnerVersion"]}",
+                    "espresso_core"       : "com.android.support.test.espresso:espresso-core:${versions["espressoVersion"]}",
+                    "junit"               : "junit:junit:${versions["junitVersion"]}",
+                    "support_annotations" : "com.android.support:support-annotations:${versions["annotationsVersion"]}",
+                    "design"              : "com.android.support:design:${versions["androidSupportSdkVersion"]}",
+                    "support-v4"          : "com.android.support:support-v4:${versions["androidSupportSdkVersion"]}",
+                    "cardview-v7"         : "com.android.support:cardview-v7:${versions["androidSupportSdkVersion"]}",
+                    "recyclerview-v7"     : "com.android.support:recyclerview-v7:${versions["androidSupportSdkVersion"]}",
+
+                    //方法数超过65535解决方法64K MultiDex分包方法
+                    "multidex"            : "com.android.support:multidex:${versions["multidexVersion"]}",
+
+                    //路由
+                    "arouter_api"         : "com.alibaba:arouter-api:${versions["arouterApiVersion"]}",
+                    "arouter_compiler"    : "com.alibaba:arouter-compiler:${versions["arouterCompilerVersion"]}",
+                    "arouter_annotation"  : "com.alibaba:arouter-annotation:${versions["arouterannotationVersion"]}",
+
+                    //黄油刀
+                    "butterknife_compiler": "com.jakewharton:butterknife-compiler:${versions["butterknifeVersion"]}",
+                    "butterknife"         : "com.jakewharton:butterknife:${versions["butterknifeVersion"]}",
+
+                    //事件订阅
+                    "eventbus"            : "org.greenrobot:eventbus:${versions["eventbusVersion"]}",
+
+                    //网络
+                    "okgo"              : "com.lzy.net:okgo:${versions["okgoVersion"]}",
+                    "gson"              : "com.google.code.gson:gson:${versions["gsonVersion"]}",
+
+                    //日志
+                    "logger"              : "com.orhanobut:logger:${versions["loggerVersion"]}",
+
+                    //fastJson
+                    "fastjson"            : "com.alibaba:fastjson:${versions["fastjsonVersion"]}.android",
+
+                    //沉浸式状态栏
+                    "barlibrary"          : "com.gyf.barlibrary:barlibrary:${versions["barlibraryVersion"]}",
+
+                    //banner
+                    "banner"              : "com.youth.banner:banner:${versions["bannerVersion"]}",
+
+                    //图片加载
+                    "fresco"             : "com.facebook.fresco:fresco:${versions["frescoVersion"]}",
+
+                    //lombok
+                    "lombokJavax"         : "javax.annotation:javax.annotation-api:${versions["javaxVersion"]}",
+                    "lombok"              : "org.projectlombok:lombok:${versions["lombokVersion"]}",
+
+                    //数据库
+                    "greenDao"            : "org.greenrobot:greendao:${versions["greendaoVersion"]}",
+
+                    //权限
+                    "permission"            : "com.yanzhenjie:permission:${versions["permissionVersion"]}",
+
+                    //屏幕适配
+                    "autosize"            : "me.jessyan:autosize:${versions["autosizeVersion"]}",
+
+                    //ui框架
+                    "xui"            : "com.github.xuexiangjys:XUI:${versions["xuiVersion"]}",
+                    "qmui"            : "com.qmuiteam:qmui:${versions["qmuiVersion"]}",
+                    "arch"            : "com.qmuiteam:arch:${versions["archVersion"]}",
+                    //dtoast
+                    "dtoast"            : "com.github.Dovar66:DToast:${versions["dtoastVersion"]}",
+
+                    "smartrefresh"            : "com.scwang.smartrefresh:SmartRefreshLayout:${versions["SmartRefreshLayoutVersion"]}",
+
+                    "shadow"            : "com.github.dmytrodanylyk.shadow-layout:${versions["shadowVersion"]}",
+
+                    "zbarlibary"            : "cn.bertsir.zbarLibary:zbarlibary:${versions["zbarlibaryVersion"]}",
+
+                    "XTabLayout"            : "com.androidkun:XTabLayout:${versions["XTabLayoutVersion"]}",
+
+    ]
+
+}
