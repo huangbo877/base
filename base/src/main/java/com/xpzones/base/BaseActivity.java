@@ -21,8 +21,8 @@ import com.xpzones.utils.KeyboardUtils;
 import com.xpzones.utils.LogUtil;
 import com.xpzones.utils.ToastUtils;
 import com.xpzones.widget.ActionBar;
-//import com.xpzones.widget.dialog.LoadingDialog;
-//import com.xuexiang.xui.utils.WidgetUtils;
+import com.xpzones.widget.dialog.LoadingDialog;
+import com.xuexiang.xui.utils.WidgetUtils;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -40,7 +40,7 @@ public abstract class BaseActivity extends FragmentActivity implements CustomAda
     private ViewStub emptyView;
     protected Context mContext;
     protected ImmersionBar mImmersionBar;
-//    protected LoadingDialog loadingDialog;
+    protected LoadingDialog loadingDialog;
     private ActionBar aBar;
 
     @Override
@@ -66,7 +66,7 @@ public abstract class BaseActivity extends FragmentActivity implements CustomAda
         if (regEvent()) {
             EventBusUtils.register(this);
         }
-//        loadingDialog = new LoadingDialog(mContext);
+        loadingDialog = new LoadingDialog(mContext);
 
 
     }
@@ -93,9 +93,9 @@ public abstract class BaseActivity extends FragmentActivity implements CustomAda
         if (mImmersionBar != null) {
             mImmersionBar.destroy();
         }
-//        if (mLoadingDialog != null) {
-//            mLoadingDialog.recycle();
-//        }
+        if (mLoadingDialog != null) {
+            mLoadingDialog.recycle();
+        }
         //将Activity从管理器移除
         BaseApplication.getApplication().getActivityManage().removeActivity(this);
     }
@@ -140,22 +140,22 @@ public abstract class BaseActivity extends FragmentActivity implements CustomAda
 
     protected abstract void initView();
 
-//    com.xuexiang.xui.widget.dialog.LoadingDialog mLoadingDialog;
+    com.xuexiang.xui.widget.dialog.LoadingDialog mLoadingDialog;
 
     public void showLoad() {
-//        if (mLoadingDialog == null) {
-//            mLoadingDialog = WidgetUtils.getLoadingDialog(this)
-//                    .setIconScale(0)
-//                    .setLoadingIcon(null)
-//                    .setLoadingSpeed(8);
-//        }
-//        mLoadingDialog.show();
+        if (mLoadingDialog == null) {
+            mLoadingDialog = WidgetUtils.getLoadingDialog(this)
+                    .setIconScale(0)
+                    .setLoadingIcon(null)
+                    .setLoadingSpeed(8);
+        }
+        mLoadingDialog.show();
     }
 
     public void dissLoad() {
-//        if (mLoadingDialog != null) {
-//            mLoadingDialog.dismiss();
-//        }
+        if (mLoadingDialog != null) {
+            mLoadingDialog.dismiss();
+        }
     }
 
     /**
