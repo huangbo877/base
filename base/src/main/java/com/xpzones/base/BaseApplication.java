@@ -15,7 +15,7 @@ import com.lzy.okgo.cookie.store.PersistentCookieStore;
 import com.xpzones.base.base.BuildConfig;
 import com.xpzones.manage.ActivityManage;
 import com.xpzones.sp.SharedPref;
-import com.xuexiang.xui.XUI;
+//import com.xuexiang.xui.XUI;
 //import com.xuexiang.xui.XUI;
 
 import java.util.logging.Level;
@@ -70,7 +70,7 @@ public class BaseApplication extends Application {
      * 初始化ui框架
      */
     private void initXui() {
-        XUI.init(this);
+//        XUI.init(this);
     }
     /**
      * 初始化网络请求框架

@@ -21,7 +21,7 @@ import android.content.Context;
 import android.os.Handler;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.request.BaseRequest;
-import com.xuexiang.xui.utils.WidgetUtils;
+//import com.xuexiang.xui.utils.WidgetUtils;
 
 /**
  * ================================================
@@ -36,33 +36,33 @@ public abstract class StringDialogCallback extends StringCallback {
 
 
 
-    com.xuexiang.xui.widget.dialog.LoadingDialog mLoadingDialog;
+//    com.xuexiang.xui.widget.dialog.LoadingDialog mLoadingDialog;
 
     public  StringDialogCallback(Context activity) {
-        if (mLoadingDialog == null) {
-            mLoadingDialog = WidgetUtils.getLoadingDialog(activity)
-                    .setIconScale(0)
-                    .setLoadingIcon(null)
-                    .setLoadingSpeed(8);
-        }
-        mLoadingDialog.show();
+//        if (mLoadingDialog == null) {
+//            mLoadingDialog = WidgetUtils.getLoadingDialog(activity)
+//                    .setIconScale(0)
+//                    .setLoadingIcon(null)
+//                    .setLoadingSpeed(8);
+//        }
+//        mLoadingDialog.show();
     }
 
     @Override
     public void onBefore(BaseRequest request) {
         super.onBefore(request);
-        if (mLoadingDialog != null && !mLoadingDialog.isShowing()) {
-            mLoadingDialog.show();
-        }
+//        if (mLoadingDialog != null && !mLoadingDialog.isShowing()) {
+//            mLoadingDialog.show();
+//        }
     }
 
     @Override
     public void onAfter(String s, Exception e) {
         super.onAfter(s, e);
-        if (mLoadingDialog != null && mLoadingDialog.isShowing()) {
-            mLoadingDialog.dismiss();
-            mLoadingDialog.recycle();
-        }
+//        if (mLoadingDialog != null && mLoadingDialog.isShowing()) {
+//            mLoadingDialog.dismiss();
+//            mLoadingDialog.recycle();
+//        }
     }
 
 
